@@ -71,3 +71,46 @@
   height: 150px;
   justify-content: space-between;
 }
+
+.difficulty {
+  margin: 0 auto;
+  margin-top: 200px ;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.difficulty__select {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.difficulty__select-select {
+  padding: 10px 10px 10px 10px;
+  font-size: 20px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  border: 2px #e94839 solid;
+  color: #939393;
+}
+
+.difficulty__button {
+  background-color: #e94839;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  width:120px;
+  height:60px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.difficulty__select-option {
+  background-color: white;
+  color: black;
+}
