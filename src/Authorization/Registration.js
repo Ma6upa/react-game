@@ -60,7 +60,7 @@ class Registration extends React.Component {
                 <input type="email" placeholder="Email@xd.com" className="registration__input-item" onChange = {this.changeHandlerEmail}></input>
                 <input type="password" placeholder="Password" className="registration__input-item" onChange = {this.changeHandlerPassword}></input>
                 <input type="password"  placeholder="Confirm Password" className="registration__input-item" onChange = {this.changeHandlerPasswordConfirm}></input>
-                <button className="registration__button" onClick = {this.registration}>пошел нахуй</button>
+                <button className="registration__button" onClick = {this.registration}>Зарегистрироваться</button>
             </div>
             }
         </div>

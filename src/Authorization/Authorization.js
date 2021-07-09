@@ -47,12 +47,12 @@ class Authorization extends React.Component {
     render() {
         return (
         <div>
-            {this.state.isAuthorized ? <Redirect to="/game"></Redirect> :
+            {this.state.isAuthorized ? <Redirect to="/difficulty"></Redirect> :
         <div className="authorization">
             <span className="authorization__text">Вход</span>
             <input type="email" placeholder="Email@xd.com" className="authorization__input-item" onChange = {this.changeHandlerEmail}></input>
             <input type="password" placeholder="Password" className="authorization__input-item" onChange = {this.changeHandlerPassword}></input>
-            <button className="authorization__button" onClick = {this.authorization}>пошел нахуй</button>
+            <button className="authorization__button" onClick = {this.authorization}>Войти</button>
         </div>
             }
         </div>
