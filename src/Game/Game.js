@@ -27,7 +27,7 @@ class Game extends React.Component {
 
     timer(){
         let time = setInterval(() => {
-            this.setState({time: this.state.time -= 1})
+            this.setState({time: this.state.time - 1})
             if(this.state.time === 0){
                 clearInterval(time)
             }
