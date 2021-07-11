@@ -44,10 +44,16 @@ class Registration extends React.Component {
                 password_confirmation: this.state.password_confirmation
             })
           });
+          if (response.ok) {
           let result = await response.json();
           if (result.status) {
               this.setState({isRegistered: true})
-          }
+          } else {
+            console.log(result.errors)
+        }
+      } else {
+        alert("Ошибка: " + response.status);
+      }
     }
 
     authorization = () => {

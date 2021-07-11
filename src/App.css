@@ -1,6 +1,7 @@
 .App {
   text-align: center;
 }
+
 .registation {
   display: flex;
   flex-direction: column;
@@ -30,8 +31,8 @@
   font-size: 20px;
   font-weight: bold;
   color: white;
-  width:300px;
-  height:30px;
+  width: 300px;
+  height: 30px;
   margin: 0 auto;
   border: none;
   border-radius: 5px;
@@ -42,6 +43,7 @@
   font-size: 15px;
   font-weight: 500;
   color: #e94839;
+  text-align: center;
 }
 
 .registration__button-authorization {
@@ -49,18 +51,20 @@
   font-size: 20px;
   font-weight: bold;
   color: white;
-  width:150px;
-  height:30px;
+  width: 150px;
+  height: 30px;
   margin: 0 auto;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 } 
 
+
 .authorization__text {
   font-size: 30px;
   font-weight: bold;
   color: #e94839;
+  text-align: center;
 }
 
 .authorization__input-item {
@@ -70,25 +74,46 @@
   padding-bottom: 5px;
   border-style: solid;
 }
+
 .authorization__button {
   background-color: #e94839;
   font-size: 20px;
   font-weight: bold;
   color: white;
-  width:300px;
-  height:30px;
+  width: 300px;
+  height: 30px;
   margin: 0 auto;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
+.authorization__text-registration {
+  font-size: 15px;
+  font-weight: 500;
+  color: #e94839;
+  text-align: center;
+}
+
+.authorization__button-registration {
+  background-color: #e94839;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  width: 300px;
+  height: 30px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+} 
+
 .authorization {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   width: 500px;
-  height: 150px;
+  height: 220px;
   justify-content: space-between;
 }
 
@@ -122,8 +147,8 @@
   font-size: 20px;
   font-weight: bold;
   color: white;
-  width:120px;
-  height:60px;
+  width: 120px;
+  height: 60px;
   margin: 0 auto;
   border: none;
   border-radius: 5px;
@@ -253,11 +278,6 @@
   padding: 5px 0px;
   color: #808080;
   font-size: 20px;
-}
-
-.error-text {
-  font-size: 20px;
-  color: red;
 }
 
 .result__button {

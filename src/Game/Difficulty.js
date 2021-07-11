@@ -36,13 +36,17 @@ class Difficulty extends React.Component {
                type_hard: this.state.type_hard
             })
           });
-          
+          if (response.ok) {
           let result = await response.json();
           localStorage.setItem('game', JSON.stringify(result.data))
           localStorage.setItem('difficulty', JSON.stringify(this.state.type_hard))
           if (result.status) {
                 this.setState({isSelected: true})
-                console.log(result)
+          } else {
+                console.log(result.errors)
+            }
+          } else {
+            alert("Ошибка: " + response.status);
           }
     }
     

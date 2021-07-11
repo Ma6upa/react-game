@@ -53,24 +53,24 @@ class Game extends React.Component {
           });
 
 
-          if (response) {
+          if (response.ok) {
             let result = await response.json();
             if(result.status === true){
                 if(result.data.question !== undefined){
-                    console.log(result.data)
                     this.setState({options: result.data.options})
                     this.setState({points: result.data.points})
                     this.setState({question: result.data.question})
                     this.setState({time: result.data.time})
                 } else {
                     localStorage.setItem('result', JSON.stringify(result.data))
-                    console.log(result.data)
                     this.setState({isGameOver: true})
                 }
                 
             } else{
                 console.log(result.errors)
             }
+          } else {
+            alert("Ошибка: " + response.status);
           }
     }
 
