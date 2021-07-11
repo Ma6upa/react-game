@@ -10,6 +10,7 @@ import {
   Link,
   Redirect
 } from "react-router-dom";
+import Result from './Game/Result';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
         </Route>
         <Route path="/game">
           <Game />
+        </Route>
+        <Route path="/result">
+          <Result />
         </Route>
         <Redirect to="/registration"></Redirect>
       </Switch>

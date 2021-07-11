@@ -50,6 +50,10 @@ class Registration extends React.Component {
           }
     }
 
+    authorization = () => {
+        this.setState({isRegistered: true})
+    }
+
     render() {
         return (
         <div>
@@ -61,6 +65,8 @@ class Registration extends React.Component {
                 <input type="password" placeholder="Password" className="registration__input-item" onChange = {this.changeHandlerPassword}></input>
                 <input type="password"  placeholder="Confirm Password" className="registration__input-item" onChange = {this.changeHandlerPasswordConfirm}></input>
                 <button className="registration__button" onClick = {this.registration}>Зарегистрироваться</button>
+                <div className="registration__text-authorization">Уже есть учетная запись?</div>
+                <button className="registration__button-authorization" onClick = {this.authorization}>Войдите</button>
             </div>
             }
         </div>

@@ -13,10 +13,11 @@ class Difficulty extends React.Component {
         }   
     }
 
+    
+
     componentDidMount() {
         let data =  JSON.parse(localStorage.getItem('user'));
-        this.setState({access_token: data.access_token})
-        
+        this.setState({access_token: data.access_token})   
     }
 
     changeHandler = (event) => {
@@ -35,14 +36,16 @@ class Difficulty extends React.Component {
                type_hard: this.state.type_hard
             })
           });
+          
           let result = await response.json();
+          localStorage.setItem('game', JSON.stringify(result.data))
+          localStorage.setItem('difficulty', JSON.stringify(this.state.type_hard))
           if (result.status) {
-              this.setState({isSelected: true})
-              console.log(result)
+                this.setState({isSelected: true})
+                console.log(result)
           }
     }
     
-
     render () {
         return (
             <div>
