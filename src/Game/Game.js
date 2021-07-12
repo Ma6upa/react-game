@@ -64,11 +64,6 @@ class Game extends React.Component {
                     this.setState({points: result.data.points})
                     this.setState({question: result.data.question})
                     this.setState({time: result.data.time})
-
-                    
-
-
-
                 } else {
                     localStorage.setItem('result', JSON.stringify(result.data))
                     this.setState({isGameOver: true})
