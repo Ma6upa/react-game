@@ -7,6 +7,7 @@ class Difficulty extends React.Component {
         super(props);
         this.state = {
             isSelected: false,
+            isExitPressed: false,
             type: 0,
             type_hard: 0,
             access_token: '',
@@ -49,9 +50,15 @@ class Difficulty extends React.Component {
             alert("Ошибка: " + response.status);
           }
     }
+
+    exit = () => {
+        this.setState({isExitPressed: true})
+    }
     
     render () {
         return (
+            <div>
+                {this.state.isExitPressed ? <Redirect to="/authorization"></Redirect> :
             <div>
                 {this.state.isSelected ? <Redirect to="/game"></Redirect> :
             <div className = "difficulty">
@@ -63,6 +70,9 @@ class Difficulty extends React.Component {
                     </select>
                 </div>
                 <button className="difficulty__button" onClick={this.difficulty}>Start</button>
+                <button className="difficulty__button-authorization" onClick = {this.exit}>Выйти</button>
+            </div>
+                }
             </div>
                 }
             </div>

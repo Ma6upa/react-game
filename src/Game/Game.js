@@ -27,7 +27,7 @@ class Game extends React.Component {
 
     timer(){
         let time = setInterval(() => {
-            this.setState({time: this.state.time -= 1})
+            this.setState({time: this.state.time - 1})
             if(this.state.time === 0){
                 clearInterval(time)
             }
@@ -35,6 +35,9 @@ class Game extends React.Component {
         
         return time
     }
+
+
+    
 
     play = async (event) => {
         let access_token = JSON.parse(localStorage.getItem('user')).access_token
@@ -61,6 +64,11 @@ class Game extends React.Component {
                     this.setState({points: result.data.points})
                     this.setState({question: result.data.question})
                     this.setState({time: result.data.time})
+
+                    
+
+
+
                 } else {
                     localStorage.setItem('result', JSON.stringify(result.data))
                     this.setState({isGameOver: true})

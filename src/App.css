@@ -160,6 +160,20 @@
   color: black;
 }
 
+.difficulty__button-authorization {
+  background-color: #e94839;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  width: 100px;
+  height: 30px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 40px;
+} 
+
 .game__wrapper {
   padding-top: 200px;
   height: 500px;

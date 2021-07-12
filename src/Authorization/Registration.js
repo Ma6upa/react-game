@@ -50,9 +50,18 @@ class Registration extends React.Component {
               this.setState({isRegistered: true})
           } else {
             console.log(result.errors)
+            if(result.errors.name !== undefined){
+                alert('Ошибка: ' + result.errors.name)
+            }
+            if(result.errors.email !== undefined){
+                alert('Ошибка: ' + result.errors.email)
+            }
+            if(result.errors.password !== undefined){
+                alert('Ошибка: ' + result.errors.password)
+            }
         }
       } else {
-        alert("Ошибка: " + response.status);
+        alert("Ошибка " + response.status);
       }
     }
 

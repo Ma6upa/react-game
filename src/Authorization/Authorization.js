@@ -44,7 +44,12 @@ class Authorization extends React.Component {
               }))
               this.setState({isAuthorized: true})
           } else {
-            console.log(result.errors)
+            if(result.errors.email !== undefined){
+                alert('Ошибка: ' + result.errors.email)
+            }
+            if(result.errors.password !== undefined){
+                alert('Ошибка: ' + result.errors.password)
+            }
             }
         } else {
             alert("Ошибка: " + response.status);
