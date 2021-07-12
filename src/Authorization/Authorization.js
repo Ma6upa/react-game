@@ -45,7 +45,7 @@ class Authorization extends React.Component {
               this.setState({isAuthorized: true})
           } else {
             if(result.errors === "Unauthorized"){
-                alert('Ошибка: вы не авторизованы')
+                alert('Ошибка: ' + result.errors)
             }
             if(result.errors.email !== undefined){
                 alert('Ошибка: ' + result.errors.email)
